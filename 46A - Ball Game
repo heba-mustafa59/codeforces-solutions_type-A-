@@ -1,0 +1,33 @@
+/* yildiz
+*/
+#include <iostream>
+#include <cmath>
+#include <vector>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    vector<int> result;
+    int currentChild = 1; 
+
+    for (int step = 1; step < n; ++step) {
+        currentChild = (currentChild + step) % n;
+        if (currentChild == 0) {
+            currentChild = n;
+        }
+        result.push_back(currentChild);
+    }
+
+    for (size_t i = 0; i < result.size(); ++i) {
+        cout << result[i];
+        if (i != result.size() - 1) {
+            cout << " ";
+        }
+    }
+
+    return 0;
+}
