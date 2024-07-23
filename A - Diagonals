@@ -1,0 +1,42 @@
+	
+/*
+      yildiz
+*/
+#include <string>
+#include <iostream>
+#include <cmath>
+#include <algorithm>
+#include <vector>
+#include <unordered_map>
+#include <queue>
+#include <map>
+using namespace std;
+#define habboosh main
+#define ll long long
+#define i int
+int habboosh()
+{
+        i t;
+        cin >> t;
+        i s = 0;
+        while (t--) {
+            i n, k;
+            cin >> n >> k;
+            i s= 0;
+            if (k > 0) {
+                k =k-n;
+                s =s+1;
+            }n =n- 1;
+            while (k > 0) {
+                k =k-n;
+                s =s+ 1;
+                if ( k > 0) {
+                    s = s + 1;
+                    k =k- n;
+                }n =n-1;
+                
+            }
+            cout << s <<  "\n";
+        }
+        return 0;
+    }
